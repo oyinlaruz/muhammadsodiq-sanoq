@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>sanoq sistemasi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Sanoq Sistemasi</h1>
+        <p class="subtitle">Sonlarni bir sanoq sistemasidan boshqasiga o'tkazing</p>
+
+        <div class="form">
+
+            <label for="number">Sonni kiriting:</label>
+            <input
+                type="text"
+                id="number"
+                placeholder="Masalan: 255"
+            >
+
+            <label for="fromBase">Qaysi sanoq sistemasidan:</label>
+
+            <select id="fromBase">
+                <option value="2">2 lik (Binary)</option>
+                <option value="8">8 lik (Octal)</option>
+                <option value="10" selected>10 lik (Decimal)</option>
+                <option value="16">16 lik (Hexadecimal)</option>
+            </select>
+
+            <button onclick="convertNumber()">
+                O'tkazish
+            </button>
+
+        </div>
+
+        <div id="result" class="result">
+
+            <div class="result-item">
+                <span>2 lik:</span>
+                <strong id="binary">-</strong>
+            </div>
+
+            <div class="result-item">
+                <span>8 lik:</span>
+                <strong id="octal">-</strong>
+            </div>
+
+            <div class="result-item">
+                <span>10 lik:</span>
+                <strong id="decimal">-</strong>
+            </div>
+
+            <div class="result-item">
+                <span>16 lik:</span>
+                <strong id="hexadecimal">-</strong>
+            </div>
+
+        </div>
+
+        <div id="error"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
